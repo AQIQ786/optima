@@ -1,0 +1,269 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:sales_order",
+ "creation": "2024-11-11 16:31:53.076382",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "order_details_section_section",
+  "sales_order",
+  "customer",
+  "customer_reference",
+  "order_date",
+  "delivery_date",
+  "column_break_pskc",
+  "status",
+  "sync_status",
+  "sync_message",
+  "order_information_section_section",
+  "order_number",
+  "internal_reference",
+  "agent_reference",
+  "work_order",
+  "column_break_clha",
+  "notes",
+  "start_date",
+  "end_date",
+  "delivery_details_section_section",
+  "delivery_description_1",
+  "delivery_description_2",
+  "delivery_address",
+  "column_break_nugp",
+  "delivery_zip",
+  "delivery_city",
+  "delivery_country",
+  "order_items_section",
+  "items",
+  "section_break_5few",
+  "components",
+  "optima_details_section",
+  "optima_order_id",
+  "optima_operation_id",
+  "column_break_heou",
+  "optima_sync_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details Section"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "sales_order.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_reference",
+   "fieldtype": "Data",
+   "label": "Customer Reference"
+  },
+  {
+   "fetch_from": "sales_order.transaction_date",
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "fetch_from": "sales_order.delivery_date",
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "column_break_pskc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "options": "Pending\nCompleted\nFailed"
+  },
+  {
+   "fieldname": "sync_status",
+   "fieldtype": "Data",
+   "label": "Sync Status",
+   "options": "Pending\nIn Progress\nCompleted\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sync_message",
+   "fieldtype": "Small Text",
+   "label": "Sync Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_information_section_section",
+   "fieldtype": "Section Break",
+   "label": "Order Information Section"
+  },
+  {
+   "fieldname": "order_number",
+   "fieldtype": "Data",
+   "label": "Order Number"
+  },
+  {
+   "fieldname": "internal_reference",
+   "fieldtype": "Data",
+   "label": "Internal Reference"
+  },
+  {
+   "fieldname": "agent_reference",
+   "fieldtype": "Data",
+   "label": "Agent Reference"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Data",
+   "label": "Work Order"
+  },
+  {
+   "fieldname": "column_break_clha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "delivery_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery Details Section"
+  },
+  {
+   "fieldname": "delivery_description_1",
+   "fieldtype": "Data",
+   "label": "Delivery Description 1"
+  },
+  {
+   "fieldname": "delivery_description_2",
+   "fieldtype": "Data",
+   "label": "Delivery Description 2"
+  },
+  {
+   "fieldname": "delivery_address",
+   "fieldtype": "Small Text",
+   "label": "Delivery Address"
+  },
+  {
+   "fieldname": "column_break_nugp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_zip",
+   "fieldtype": "Data",
+   "label": "Delivery ZIP"
+  },
+  {
+   "fieldname": "delivery_city",
+   "fieldtype": "Data",
+   "label": "Delivery City"
+  },
+  {
+   "fieldname": "delivery_country",
+   "fieldtype": "Data",
+   "label": "Delivery Country"
+  },
+  {
+   "fieldname": "order_items_section",
+   "fieldtype": "Section Break",
+   "label": "Order Items"
+  },
+  {
+   "fieldname": "optima_details_section",
+   "fieldtype": "Section Break",
+   "label": "Optima Details"
+  },
+  {
+   "fieldname": "optima_order_id",
+   "fieldtype": "Data",
+   "label": "Optima Order ID"
+  },
+  {
+   "fieldname": "optima_operation_id",
+   "fieldtype": "Data",
+   "label": "Optima Operation ID"
+  },
+  {
+   "fieldname": "column_break_heou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "optima_sync_details",
+   "fieldtype": "Code",
+   "label": "Optima Sync Details"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Optima Order Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5few",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "components",
+   "fieldtype": "Table",
+   "label": "Components",
+   "options": "Optima Order Component",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-26 12:16:00.890876",
+ "modified_by": "Administrator",
+ "module": "Optima",
+ "name": "Optima Order",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

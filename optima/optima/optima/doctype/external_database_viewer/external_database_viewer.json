@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-11 14:13:35.792166",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "optima_integration_section",
+  "server_ip_address",
+  "username",
+  "column_break_kput",
+  "port",
+  "password",
+  "show_databases_section",
+  "databases",
+  "section_break_wjrz",
+  "tables_container"
+ ],
+ "fields": [
+  {
+   "fieldname": "optima_integration_section",
+   "fieldtype": "Section Break",
+   "label": "Optima Database Connection"
+  },
+  {
+   "default": "196.200.26.2",
+   "fieldname": "server_ip_address",
+   "fieldtype": "Data",
+   "label": "Server IP Address",
+   "reqd": 1
+  },
+  {
+   "default": "sa",
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kput",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1433",
+   "fieldname": "port",
+   "fieldtype": "Data",
+   "label": "Port",
+   "reqd": 1
+  },
+  {
+   "default": "123@impala",
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "show_databases_section",
+   "fieldtype": "Section Break",
+   "label": "Optima Databases"
+  },
+  {
+   "fieldname": "databases",
+   "fieldtype": "HTML",
+   "label": "Available Databases"
+  },
+  {
+   "fieldname": "section_break_wjrz",
+   "fieldtype": "Section Break",
+   "label": "Database Tables"
+  },
+  {
+   "fieldname": "tables_container",
+   "fieldtype": "HTML",
+   "label": "Tables"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-11 14:51:43.197431",
+ "modified_by": "Administrator",
+ "module": "Optima",
+ "name": "External Database Viewer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

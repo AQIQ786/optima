@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-11 13:03:39.307588",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "server_details_section",
+  "server_ip",
+  "database_name",
+  "column_break_eyhu",
+  "port",
+  "username",
+  "password",
+  "enabled",
+  "section_break_oylm",
+  "last_synchronization"
+ ],
+ "fields": [
+  {
+   "fieldname": "server_ip",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Server IP",
+   "reqd": 1
+  },
+  {
+   "default": "1433",
+   "fieldname": "port",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Port",
+   "reqd": 1
+  },
+  {
+   "default": "sa",
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Username",
+   "reqd": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "database_name",
+   "fieldtype": "Data",
+   "label": "Database Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_eyhu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_oylm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "last_synchronization",
+   "fieldtype": "Datetime",
+   "label": "Last Synchronization",
+   "read_only": 1
+  },
+  {
+   "fieldname": "server_details_section",
+   "fieldtype": "Section Break",
+   "label": "Server Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-11 13:24:10.790039",
+ "modified_by": "Administrator",
+ "module": "Optima",
+ "name": "Optima Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
